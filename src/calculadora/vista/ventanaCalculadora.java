@@ -33,6 +33,8 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         panelBotones = new javax.swing.JPanel();
         panelResultado = new javax.swing.JPanel();
+        tituloResultado = new javax.swing.JLabel();
+        jTextField_resultado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
@@ -80,19 +82,34 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         getContentPane().add(panelBotones);
 
+        panelResultado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 0, new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 10)));
         panelResultado.setMaximumSize(new java.awt.Dimension(32767, 70));
         panelResultado.setPreferredSize(new java.awt.Dimension(0, 70));
+        panelResultado.setLayout(new javax.swing.BoxLayout(panelResultado, javax.swing.BoxLayout.X_AXIS));
 
-        javax.swing.GroupLayout panelResultadoLayout = new javax.swing.GroupLayout(panelResultado);
-        panelResultado.setLayout(panelResultadoLayout);
-        panelResultadoLayout.setHorizontalGroup(
-            panelResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
-        );
-        panelResultadoLayout.setVerticalGroup(
-            panelResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
+        tituloResultado.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        tituloResultado.setText("Resultado :");
+        tituloResultado.setToolTipText("");
+        tituloResultado.setMaximumSize(new java.awt.Dimension(100, 54));
+        tituloResultado.setMinimumSize(new java.awt.Dimension(100, 54));
+        tituloResultado.setPreferredSize(new java.awt.Dimension(100, 54));
+        panelResultado.add(tituloResultado);
+
+        jTextField_resultado.setEditable(false);
+        jTextField_resultado.setBackground(new java.awt.Color(252, 252, 252));
+        jTextField_resultado.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        jTextField_resultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField_resultado.setText("0");
+        jTextField_resultado.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8));
+        jTextField_resultado.setMaximumSize(new java.awt.Dimension(2147483647, 40));
+        jTextField_resultado.setMinimumSize(new java.awt.Dimension(12, 40));
+        jTextField_resultado.setPreferredSize(new java.awt.Dimension(34, 40));
+        jTextField_resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_resultadoActionPerformed(evt);
+            }
+        });
+        panelResultado.add(jTextField_resultado);
 
         getContentPane().add(panelResultado);
 
@@ -103,6 +120,10 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_resultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_resultadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,10 +162,12 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelHeader;
     private javax.swing.JPanel panelPantalla;
     private javax.swing.JPanel panelResultado;
     private javax.swing.JLabel titulo;
+    private javax.swing.JLabel tituloResultado;
     // End of variables declaration//GEN-END:variables
 }
