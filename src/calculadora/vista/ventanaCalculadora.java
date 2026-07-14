@@ -26,12 +26,31 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panelHeader = new javax.swing.JPanel();
         titulo = new javax.swing.JLabel();
         panelPantalla = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         panelBotones = new javax.swing.JPanel();
+        panelNumeros = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        panelOperadoresBasicos = new javax.swing.JPanel();
+        jButton13 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
         panelResultado = new javax.swing.JPanel();
         tituloResultado = new javax.swing.JLabel();
         jTextField_resultado = new javax.swing.JTextField();
@@ -71,16 +90,77 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         getContentPane().add(panelPantalla);
         panelPantalla.getAccessibleContext().setAccessibleDescription("");
 
-        javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
-        panelBotones.setLayout(panelBotonesLayout);
-        panelBotonesLayout.setHorizontalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
-        );
-        panelBotonesLayout.setVerticalGroup(
-            panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 322, Short.MAX_VALUE)
-        );
+        panelBotones.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        panelBotones.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelBotones.setLayout(new java.awt.GridBagLayout());
+
+        panelNumeros.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelNumeros.setRequestFocusEnabled(false);
+        panelNumeros.setLayout(new java.awt.GridLayout(4, 3, 5, 5));
+
+        jButton5.setText("0");
+        panelNumeros.add(jButton5);
+
+        jButton1.setText("0");
+        panelNumeros.add(jButton1);
+
+        jButton2.setText("0");
+        panelNumeros.add(jButton2);
+
+        jButton9.setText("0");
+        panelNumeros.add(jButton9);
+
+        jButton10.setText("0");
+        panelNumeros.add(jButton10);
+
+        jButton11.setText("0");
+        panelNumeros.add(jButton11);
+
+        jButton6.setText("0");
+        panelNumeros.add(jButton6);
+
+        jButton8.setText("0");
+        panelNumeros.add(jButton8);
+
+        jButton22.setText("0");
+        panelNumeros.add(jButton22);
+
+        jButton7.setText("0");
+        panelNumeros.add(jButton7);
+
+        jButton24.setText("0");
+        panelNumeros.add(jButton24);
+
+        jButton23.setText("0");
+        panelNumeros.add(jButton23);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 3.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
+        panelBotones.add(panelNumeros, gridBagConstraints);
+
+        panelOperadoresBasicos.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelOperadoresBasicos.setLayout(new java.awt.GridLayout(4, 1, 5, 5));
+
+        jButton13.setText("0");
+        panelOperadoresBasicos.add(jButton13);
+
+        jButton17.setText("0");
+        panelOperadoresBasicos.add(jButton17);
+
+        jButton16.setText("0");
+        panelOperadoresBasicos.add(jButton16);
+
+        jButton27.setText("0");
+        panelOperadoresBasicos.add(jButton27);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        panelBotones.add(panelOperadoresBasicos, gridBagConstraints);
 
         getContentPane().add(panelBotones);
 
@@ -164,10 +244,28 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelHeader;
+    private javax.swing.JPanel panelNumeros;
+    private javax.swing.JPanel panelOperadoresBasicos;
     private javax.swing.JPanel panelPantalla;
     private javax.swing.JPanel panelResultado;
     private javax.swing.JLabel titulo;
