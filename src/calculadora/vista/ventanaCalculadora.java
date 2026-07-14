@@ -30,6 +30,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelHeader = new javax.swing.JPanel();
         titulo = new javax.swing.JLabel();
         panelPantalla = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
         panelBotones = new javax.swing.JPanel();
         panelResultado = new javax.swing.JPanel();
 
@@ -50,17 +51,18 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         panelPantalla.setMaximumSize(new java.awt.Dimension(32767, 70));
         panelPantalla.setPreferredSize(new java.awt.Dimension(0, 70));
+        panelPantalla.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout panelPantallaLayout = new javax.swing.GroupLayout(panelPantalla);
-        panelPantalla.setLayout(panelPantallaLayout);
-        panelPantallaLayout.setHorizontalGroup(
-            panelPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
-        );
-        panelPantallaLayout.setVerticalGroup(
-            panelPantallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
-        );
+        jTextField1.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField1.setText("0");
+        jTextField1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8)));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        panelPantalla.add(jTextField1, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(panelPantalla);
         panelPantalla.getAccessibleContext().setAccessibleDescription("");
@@ -98,6 +100,10 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -134,6 +140,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelHeader;
     private javax.swing.JPanel panelPantalla;
