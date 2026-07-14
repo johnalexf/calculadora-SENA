@@ -41,8 +41,9 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         panelHeader.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        panelHeader.setMaximumSize(new java.awt.Dimension(32767, 30));
-        panelHeader.setPreferredSize(new java.awt.Dimension(0, 30));
+        panelHeader.setMaximumSize(new java.awt.Dimension(32767, 50));
+        panelHeader.setMinimumSize(new java.awt.Dimension(166, 50));
+        panelHeader.setPreferredSize(new java.awt.Dimension(0, 50));
         panelHeader.setLayout(new java.awt.GridBagLayout());
 
         titulo.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
@@ -77,14 +78,15 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         );
         panelBotonesLayout.setVerticalGroup(
             panelBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 332, Short.MAX_VALUE)
+            .addGap(0, 322, Short.MAX_VALUE)
         );
 
         getContentPane().add(panelBotones);
 
         panelResultado.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 0, new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 10)));
-        panelResultado.setMaximumSize(new java.awt.Dimension(32767, 70));
-        panelResultado.setPreferredSize(new java.awt.Dimension(0, 70));
+        panelResultado.setMaximumSize(new java.awt.Dimension(32767, 60));
+        panelResultado.setMinimumSize(new java.awt.Dimension(132, 60));
+        panelResultado.setPreferredSize(new java.awt.Dimension(0, 60));
         panelResultado.setLayout(new javax.swing.BoxLayout(panelResultado, javax.swing.BoxLayout.X_AXIS));
 
         tituloResultado.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
