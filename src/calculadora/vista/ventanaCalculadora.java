@@ -28,6 +28,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private void initComponents() {
 
         panelHeader = new javax.swing.JPanel();
+        titulo = new javax.swing.JLabel();
         panelPantalla = new javax.swing.JPanel();
         panelBotones = new javax.swing.JPanel();
         panelResultado = new javax.swing.JPanel();
@@ -36,19 +37,14 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         setTitle("Calculadora");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
+        panelHeader.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         panelHeader.setMaximumSize(new java.awt.Dimension(32767, 30));
         panelHeader.setPreferredSize(new java.awt.Dimension(0, 30));
+        panelHeader.setLayout(new java.awt.GridBagLayout());
 
-        javax.swing.GroupLayout panelHeaderLayout = new javax.swing.GroupLayout(panelHeader);
-        panelHeader.setLayout(panelHeaderLayout);
-        panelHeaderLayout.setHorizontalGroup(
-            panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 396, Short.MAX_VALUE)
-        );
-        panelHeaderLayout.setVerticalGroup(
-            panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        titulo.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
+        titulo.setText("Calculadora Basica");
+        panelHeader.add(titulo, new java.awt.GridBagConstraints());
 
         getContentPane().add(panelHeader);
 
@@ -98,7 +94,8 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         getContentPane().add(panelResultado);
 
-        setBounds(0, 0, 412, 541);
+        setSize(new java.awt.Dimension(412, 541));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -141,5 +138,6 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JPanel panelHeader;
     private javax.swing.JPanel panelPantalla;
     private javax.swing.JPanel panelResultado;
+    private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }
