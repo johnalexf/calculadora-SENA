@@ -5,6 +5,8 @@
  */
 package calculadora;
 
+import calculadora.vista.ventanaCalculadora;
+
 /**
  *
  * @author JOHN FORERO
@@ -16,6 +18,9 @@ public class Calculadora {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        ventanaCalculadora ventanaPrincipal = new ventanaCalculadora();
+        ventanaPrincipal.setVisible(true);
     }
     
 }
