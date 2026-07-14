@@ -1,0 +1,9 @@
+# Configuraciones privadas del usuario en NetBeans
+/nbproject/private/
+
+# Carpetas de compilación y empaquetado autogeneradas
+/build/
+/dist/
+
+# Archivos compilados sueltos (por seguridad)
+*.class
