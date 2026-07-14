@@ -52,6 +52,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         getContentPane().add(panelHeader);
 
+        panelPantalla.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         panelPantalla.setMaximumSize(new java.awt.Dimension(32767, 70));
         panelPantalla.setPreferredSize(new java.awt.Dimension(0, 70));
         panelPantalla.setLayout(new java.awt.BorderLayout());
