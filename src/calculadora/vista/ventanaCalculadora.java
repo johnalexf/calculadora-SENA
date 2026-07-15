@@ -45,7 +45,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         btnUno = new javax.swing.JButton();
         btnDos = new javax.swing.JButton();
         btnTres = new javax.swing.JButton();
-        btnSigno = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         btnCero = new javax.swing.JButton();
         btnDecimal = new javax.swing.JButton();
         panelBotonesOperadoresBasicos = new javax.swing.JPanel();
@@ -176,9 +176,14 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnTres);
 
-        btnSigno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnSigno.setText("+/-");
-        panelBotonesNumeros.add(btnSigno);
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        panelBotonesNumeros.add(btnLimpiar);
 
         btnCero.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
         btnCero.setText("0");
@@ -308,6 +313,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         enviarTextoBoton( (javax.swing.JButton) evt.getSource() );
     }//GEN-LAST:event_eventClicBotonesOperadoresBasicos
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        controladorEntradaPantalla.limpiarPantalla();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -353,13 +363,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnDecimal;
     private javax.swing.JButton btnDivision;
     private javax.swing.JButton btnDos;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnMultiplicacion;
     private javax.swing.JButton btnNueve;
     private javax.swing.JButton btnOcho;
     private javax.swing.JButton btnResta;
     private javax.swing.JButton btnSeis;
     private javax.swing.JButton btnSiete;
-    private javax.swing.JButton btnSigno;
     private javax.swing.JButton btnSuma;
     private javax.swing.JButton btnTres;
     private javax.swing.JButton btnUno;

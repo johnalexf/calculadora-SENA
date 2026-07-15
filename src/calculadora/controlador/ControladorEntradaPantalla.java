@@ -32,6 +32,11 @@ public class ControladorEntradaPantalla {
         // Le ordenamos a la vista que dibuje el nuevo texto completo
         vista.actualizarEntradaPantalla(nuevoTexto);
     }
+    
+    //Función que limpia la pantalla de entrada de datos
+    public void limpiarPantalla(){
+        vista.actualizarEntradaPantalla("");
+    }
      
 }
 
