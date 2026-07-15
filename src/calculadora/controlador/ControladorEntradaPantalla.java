@@ -21,8 +21,8 @@ public class ControladorEntradaPantalla {
         this.vista = vista;
     }
     
-    // Función que manipulará la entrada de datos
-    public void manejarEntradaBoton(String valorPulsado) {
+    // Función que agregara la entrada de datos
+    public void agregarEntradaBotonAPantalla(String valorPulsado) {
         // Le preguntamos a la vista qué texto tiene actualmente
         String textoActual = vista.obtenerEntradaPantalla();
         
