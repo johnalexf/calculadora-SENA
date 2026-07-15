@@ -29,11 +29,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         panelHeader = new javax.swing.JPanel();
-        titulo = new javax.swing.JLabel();
+        lblTituloPrincipal = new javax.swing.JLabel();
         panelPantalla = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        entradaDatoPantalla = new javax.swing.JTextField();
         panelBotones = new javax.swing.JPanel();
-        panelNumeros = new javax.swing.JPanel();
+        panelBotonesNumeros = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -46,14 +46,14 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
-        panelOperadoresBasicos = new javax.swing.JPanel();
+        panelBotonesOperadoresBasicos = new javax.swing.JPanel();
         jButton13 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
         panelResultado = new javax.swing.JPanel();
-        tituloResultado = new javax.swing.JLabel();
-        jTextField_resultado = new javax.swing.JTextField();
+        lblTituloResultado = new javax.swing.JLabel();
+        salidaDatoSolucion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
@@ -65,9 +65,9 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelHeader.setPreferredSize(new java.awt.Dimension(0, 50));
         panelHeader.setLayout(new java.awt.GridBagLayout());
 
-        titulo.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
-        titulo.setText("Calculadora Basica");
-        panelHeader.add(titulo, new java.awt.GridBagConstraints());
+        lblTituloPrincipal.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
+        lblTituloPrincipal.setText("Calculadora Basica");
+        panelHeader.add(lblTituloPrincipal, new java.awt.GridBagConstraints());
 
         getContentPane().add(panelHeader);
 
@@ -76,16 +76,16 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelPantalla.setPreferredSize(new java.awt.Dimension(0, 70));
         panelPantalla.setLayout(new java.awt.BorderLayout());
 
-        jTextField1.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0");
-        jTextField1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8)));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        entradaDatoPantalla.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        entradaDatoPantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        entradaDatoPantalla.setText("0");
+        entradaDatoPantalla.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8)));
+        entradaDatoPantalla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                entradaDatoPantallaActionPerformed(evt);
             }
         });
-        panelPantalla.add(jTextField1, java.awt.BorderLayout.CENTER);
+        panelPantalla.add(entradaDatoPantalla, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(panelPantalla);
         panelPantalla.getAccessibleContext().setAccessibleDescription("");
@@ -94,73 +94,73 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelBotones.setPreferredSize(new java.awt.Dimension(0, 0));
         panelBotones.setLayout(new java.awt.GridBagLayout());
 
-        panelNumeros.setPreferredSize(new java.awt.Dimension(0, 0));
-        panelNumeros.setRequestFocusEnabled(false);
-        panelNumeros.setLayout(new java.awt.GridLayout(4, 3, 5, 5));
+        panelBotonesNumeros.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelBotonesNumeros.setRequestFocusEnabled(false);
+        panelBotonesNumeros.setLayout(new java.awt.GridLayout(4, 3, 5, 5));
 
         jButton5.setText("0");
-        panelNumeros.add(jButton5);
+        panelBotonesNumeros.add(jButton5);
 
         jButton1.setText("0");
-        panelNumeros.add(jButton1);
+        panelBotonesNumeros.add(jButton1);
 
         jButton2.setText("0");
-        panelNumeros.add(jButton2);
+        panelBotonesNumeros.add(jButton2);
 
         jButton9.setText("0");
-        panelNumeros.add(jButton9);
+        panelBotonesNumeros.add(jButton9);
 
         jButton10.setText("0");
-        panelNumeros.add(jButton10);
+        panelBotonesNumeros.add(jButton10);
 
         jButton11.setText("0");
-        panelNumeros.add(jButton11);
+        panelBotonesNumeros.add(jButton11);
 
         jButton6.setText("0");
-        panelNumeros.add(jButton6);
+        panelBotonesNumeros.add(jButton6);
 
         jButton8.setText("0");
-        panelNumeros.add(jButton8);
+        panelBotonesNumeros.add(jButton8);
 
         jButton22.setText("0");
-        panelNumeros.add(jButton22);
+        panelBotonesNumeros.add(jButton22);
 
         jButton7.setText("0");
-        panelNumeros.add(jButton7);
+        panelBotonesNumeros.add(jButton7);
 
         jButton24.setText("0");
-        panelNumeros.add(jButton24);
+        panelBotonesNumeros.add(jButton24);
 
         jButton23.setText("0");
-        panelNumeros.add(jButton23);
+        panelBotonesNumeros.add(jButton23);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 3.0;
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
-        panelBotones.add(panelNumeros, gridBagConstraints);
+        panelBotones.add(panelBotonesNumeros, gridBagConstraints);
 
-        panelOperadoresBasicos.setPreferredSize(new java.awt.Dimension(0, 0));
-        panelOperadoresBasicos.setLayout(new java.awt.GridLayout(4, 1, 5, 5));
+        panelBotonesOperadoresBasicos.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelBotonesOperadoresBasicos.setLayout(new java.awt.GridLayout(4, 1, 5, 5));
 
         jButton13.setText("0");
-        panelOperadoresBasicos.add(jButton13);
+        panelBotonesOperadoresBasicos.add(jButton13);
 
         jButton17.setText("0");
-        panelOperadoresBasicos.add(jButton17);
+        panelBotonesOperadoresBasicos.add(jButton17);
 
         jButton16.setText("0");
-        panelOperadoresBasicos.add(jButton16);
+        panelBotonesOperadoresBasicos.add(jButton16);
 
         jButton27.setText("0");
-        panelOperadoresBasicos.add(jButton27);
+        panelBotonesOperadoresBasicos.add(jButton27);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        panelBotones.add(panelOperadoresBasicos, gridBagConstraints);
+        panelBotones.add(panelBotonesOperadoresBasicos, gridBagConstraints);
 
         getContentPane().add(panelBotones);
 
@@ -170,29 +170,29 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelResultado.setPreferredSize(new java.awt.Dimension(0, 60));
         panelResultado.setLayout(new javax.swing.BoxLayout(panelResultado, javax.swing.BoxLayout.X_AXIS));
 
-        tituloResultado.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
-        tituloResultado.setText("Resultado :");
-        tituloResultado.setToolTipText("");
-        tituloResultado.setMaximumSize(new java.awt.Dimension(100, 54));
-        tituloResultado.setMinimumSize(new java.awt.Dimension(100, 54));
-        tituloResultado.setPreferredSize(new java.awt.Dimension(100, 54));
-        panelResultado.add(tituloResultado);
+        lblTituloResultado.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        lblTituloResultado.setText("Resultado :");
+        lblTituloResultado.setToolTipText("");
+        lblTituloResultado.setMaximumSize(new java.awt.Dimension(100, 54));
+        lblTituloResultado.setMinimumSize(new java.awt.Dimension(100, 54));
+        lblTituloResultado.setPreferredSize(new java.awt.Dimension(100, 54));
+        panelResultado.add(lblTituloResultado);
 
-        jTextField_resultado.setEditable(false);
-        jTextField_resultado.setBackground(new java.awt.Color(252, 252, 252));
-        jTextField_resultado.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
-        jTextField_resultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField_resultado.setText("0");
-        jTextField_resultado.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8));
-        jTextField_resultado.setMaximumSize(new java.awt.Dimension(2147483647, 40));
-        jTextField_resultado.setMinimumSize(new java.awt.Dimension(12, 40));
-        jTextField_resultado.setPreferredSize(new java.awt.Dimension(34, 40));
-        jTextField_resultado.addActionListener(new java.awt.event.ActionListener() {
+        salidaDatoSolucion.setEditable(false);
+        salidaDatoSolucion.setBackground(new java.awt.Color(252, 252, 252));
+        salidaDatoSolucion.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        salidaDatoSolucion.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        salidaDatoSolucion.setText("0");
+        salidaDatoSolucion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8));
+        salidaDatoSolucion.setMaximumSize(new java.awt.Dimension(2147483647, 40));
+        salidaDatoSolucion.setMinimumSize(new java.awt.Dimension(12, 40));
+        salidaDatoSolucion.setPreferredSize(new java.awt.Dimension(34, 40));
+        salidaDatoSolucion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_resultadoActionPerformed(evt);
+                salidaDatoSolucionActionPerformed(evt);
             }
         });
-        panelResultado.add(jTextField_resultado);
+        panelResultado.add(salidaDatoSolucion);
 
         getContentPane().add(panelResultado);
 
@@ -200,13 +200,13 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void entradaDatoPantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaDatoPantallaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_entradaDatoPantallaActionPerformed
 
-    private void jTextField_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_resultadoActionPerformed
+    private void salidaDatoSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidaDatoSolucionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_resultadoActionPerformed
+    }//GEN-LAST:event_salidaDatoSolucionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,6 +244,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField entradaDatoPantalla;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -260,15 +261,14 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField_resultado;
+    private javax.swing.JLabel lblTituloPrincipal;
+    private javax.swing.JLabel lblTituloResultado;
     private javax.swing.JPanel panelBotones;
+    private javax.swing.JPanel panelBotonesNumeros;
+    private javax.swing.JPanel panelBotonesOperadoresBasicos;
     private javax.swing.JPanel panelHeader;
-    private javax.swing.JPanel panelNumeros;
-    private javax.swing.JPanel panelOperadoresBasicos;
     private javax.swing.JPanel panelPantalla;
     private javax.swing.JPanel panelResultado;
-    private javax.swing.JLabel titulo;
-    private javax.swing.JLabel tituloResultado;
+    private javax.swing.JTextField salidaDatoSolucion;
     // End of variables declaration//GEN-END:variables
 }
