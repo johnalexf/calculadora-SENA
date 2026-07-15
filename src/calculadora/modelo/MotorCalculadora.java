@@ -14,15 +14,25 @@ import java.util.ArrayList;
  */
 public class MotorCalculadora {
     
-   private final List<Operadores> operadoresValidos;
+   private final List<Operador> operadoresValidos;
    
    public MotorCalculadora(){
        operadoresValidos = new ArrayList<>();
-       operadoresValidos.add(new Operadores("suma", "+", 2, 1));
-       operadoresValidos.add(new Operadores("resta", "-", 2, 1));
-       operadoresValidos.add(new Operadores("multiplicacion", "X", 2, 2));
-       operadoresValidos.add(new Operadores("division", "/", 2, 2));
+       operadoresValidos.add(new Operador("suma", "+", 2, 1));
+       operadoresValidos.add(new Operador("resta", "-", 2, 1));
+       operadoresValidos.add(new Operador("multiplicacion", "X", 2, 2));
+       operadoresValidos.add(new Operador("division", "/", 2, 2));
    
+   }
+   
+   public boolean validarOperador(String operadorAValidar){
+       
+       for(Operador operador : this.operadoresValidos){
+           if(operador.getSimbolo().equals(operadorAValidar))
+               return true;
+       }
+       return false;
+       
    }
     
 }

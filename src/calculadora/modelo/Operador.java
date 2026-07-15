@@ -9,7 +9,7 @@ package calculadora.modelo;
  *
  * @author johna
  */
-public class Operadores {
+public class Operador {
     
     private String nombre;
     private String simbolo;
@@ -17,7 +17,7 @@ public class Operadores {
     private int prioridad;
     
     //Constructor
-    public Operadores(String nombre, String simbolo, int cantOperandos, int prioridad) {
+    public Operador(String nombre, String simbolo, int cantOperandos, int prioridad) {
         this.nombre = nombre;
         this.simbolo = simbolo;
         this.cantOperandos = cantOperandos;

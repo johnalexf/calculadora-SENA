@@ -5,6 +5,7 @@
  */
 package calculadora.vista;
 
+import calculadora.controlador.ControladorCalcularResultado;
 import calculadora.controlador.ControladorEntradaPantalla;
 
 /**
@@ -270,6 +271,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         btnCalcular.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         btnCalcular.setText("Calcular");
         btnCalcular.setMargin(new java.awt.Insets(6, 14, 6, 14));
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
         panelBotonCalcular.add(btnCalcular);
 
         panelResultado.add(panelBotonCalcular);
@@ -317,6 +323,11 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
         controladorEntradaPantalla.limpiarPantalla();
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        // TODO add your handling code here:
+        controladorCalcularResultado.calcularResultado();
+    }//GEN-LAST:event_btnCalcularActionPerformed
 
     
     /**
@@ -403,5 +414,13 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     public void setControladorEntradaPantalla(ControladorEntradaPantalla controlador) {
         this.controladorEntradaPantalla = controlador;
     }
+    
+    //
+    private ControladorCalcularResultado controladorCalcularResultado;
+    
+    public void setControladorCalcularResultado(ControladorCalcularResultado controlador){
+        this.controladorCalcularResultado = controlador;
+    }
+    
 
 }
