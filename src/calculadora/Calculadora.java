@@ -5,7 +5,8 @@
  */
 package calculadora;
 
-import calculadora.vista.ventanaCalculadora;
+import calculadora.controlador.controladorEntradaPantalla;
+import calculadora.vista.VentanaCalculadora;
 
 /**
  *
@@ -19,7 +20,17 @@ public class Calculadora {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        ventanaCalculadora ventanaPrincipal = new ventanaCalculadora();
+        //Instanciar la vista principal que va ver el usuario
+        VentanaCalculadora ventanaPrincipal = new VentanaCalculadora();
+        
+        //Instanciar el controlador Entrada pantalla pasandole como argumento la ventana principal
+        //Para que este pueda acceder a la informacion escrita por el usuario en el campo de texto
+        controladorEntradaPantalla controladorEntradaPantalla = new controladorEntradaPantalla(ventanaPrincipal);
+        
+        //Asignar el valor del controlador entrada principal para que la vista pueda reportar cuando un boton se ha oprimido
+        ventanaPrincipal.setControladorEntradaPantalla(controladorEntradaPantalla);
+        
+        //Poner visible en pantalla la ventana principal
         ventanaPrincipal.setVisible(true);
     }
     
