@@ -5,7 +5,7 @@
  */
 package calculadora;
 
-import calculadora.controlador.controladorEntradaPantalla;
+import calculadora.controlador.ControladorEntradaPantalla;
 import calculadora.vista.VentanaCalculadora;
 
 /**
@@ -25,7 +25,7 @@ public class Calculadora {
         
         //Instanciar el controlador Entrada pantalla pasandole como argumento la ventana principal
         //Para que este pueda acceder a la informacion escrita por el usuario en el campo de texto
-        controladorEntradaPantalla controladorEntradaPantalla = new controladorEntradaPantalla(ventanaPrincipal);
+        ControladorEntradaPantalla controladorEntradaPantalla = new ControladorEntradaPantalla(ventanaPrincipal);
         
         //Asignar el valor del controlador entrada principal para que la vista pueda reportar cuando un boton se ha oprimido
         ventanaPrincipal.setControladorEntradaPantalla(controladorEntradaPantalla);

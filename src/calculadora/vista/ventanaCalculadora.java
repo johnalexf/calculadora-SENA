@@ -5,6 +5,8 @@
  */
 package calculadora.vista;
 
+import calculadora.controlador.ControladorEntradaPantalla;
+
 /**
  *
  * @author JOHN FORERO
@@ -320,4 +322,24 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JPanel panelResultado;
     private javax.swing.JTextField salidaDatoSolucion;
     // End of variables declaration//GEN-END:variables
+
+
+    //Los siguientes metodos se crean para que el controlador pueda obtener 
+    // y manipular el string dentro de la caja de texto entradaDatoPantalla
+    public String obtenerEntradaPantalla(){
+        return entradaDatoPantalla.getText();
+    }
+    
+    public void actualizarEntradaPantalla(String sentenciaActualizada){
+        entradaDatoPantalla.setText(sentenciaActualizada);
+    }
+    
+    // Creamos un espacio en la memoria de la ventana para guardar su controlador
+    private ControladorEntradaPantalla controladorEntradaPantalla;
+
+    // Creamos la puerta para que desde el Main nos inyecten ese controlador
+    public void setControladorEntradaPantalla(ControladorEntradaPantalla controlador) {
+        this.controladorEntradaPantalla = controlador;
+    }
+
 }
