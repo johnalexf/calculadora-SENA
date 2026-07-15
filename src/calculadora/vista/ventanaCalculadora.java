@@ -34,23 +34,23 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         entradaDatoPantalla = new javax.swing.JTextField();
         panelBotones = new javax.swing.JPanel();
         panelBotonesNumeros = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
+        btnSiete = new javax.swing.JButton();
+        btnOcho = new javax.swing.JButton();
+        btnNueve = new javax.swing.JButton();
+        btnCuatro = new javax.swing.JButton();
+        btnCinco = new javax.swing.JButton();
+        btnSeis = new javax.swing.JButton();
+        btnUno = new javax.swing.JButton();
+        btnDos = new javax.swing.JButton();
+        btnTres = new javax.swing.JButton();
+        btnSigno = new javax.swing.JButton();
+        btnCero = new javax.swing.JButton();
+        btnDecimal = new javax.swing.JButton();
         panelBotonesOperadoresBasicos = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
+        btnSuma = new javax.swing.JButton();
+        btnResta = new javax.swing.JButton();
+        btnMultiplicacion = new javax.swing.JButton();
+        btnDivision = new javax.swing.JButton();
         panelResultado = new javax.swing.JPanel();
         lblTituloResultado = new javax.swing.JLabel();
         salidaDatoSolucion = new javax.swing.JTextField();
@@ -76,7 +76,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelPantalla.setPreferredSize(new java.awt.Dimension(0, 70));
         panelPantalla.setLayout(new java.awt.BorderLayout());
 
-        entradaDatoPantalla.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        entradaDatoPantalla.setFont(new java.awt.Font("Monospaced", 0, 36)); // NOI18N
         entradaDatoPantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         entradaDatoPantalla.setText("0");
         entradaDatoPantalla.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8)));
@@ -98,41 +98,63 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelBotonesNumeros.setRequestFocusEnabled(false);
         panelBotonesNumeros.setLayout(new java.awt.GridLayout(4, 3, 5, 5));
 
-        jButton5.setText("0");
-        panelBotonesNumeros.add(jButton5);
+        btnSiete.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnSiete.setText("7");
+        panelBotonesNumeros.add(btnSiete);
 
-        jButton1.setText("0");
-        panelBotonesNumeros.add(jButton1);
+        btnOcho.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnOcho.setText("8");
+        btnOcho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOchoActionPerformed(evt);
+            }
+        });
+        panelBotonesNumeros.add(btnOcho);
 
-        jButton2.setText("0");
-        panelBotonesNumeros.add(jButton2);
+        btnNueve.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnNueve.setText("9");
+        panelBotonesNumeros.add(btnNueve);
 
-        jButton9.setText("0");
-        panelBotonesNumeros.add(jButton9);
+        btnCuatro.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCuatro.setText("4");
+        panelBotonesNumeros.add(btnCuatro);
 
-        jButton10.setText("0");
-        panelBotonesNumeros.add(jButton10);
+        btnCinco.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCinco.setText("5");
+        panelBotonesNumeros.add(btnCinco);
 
-        jButton11.setText("0");
-        panelBotonesNumeros.add(jButton11);
+        btnSeis.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnSeis.setText("6");
+        panelBotonesNumeros.add(btnSeis);
 
-        jButton6.setText("0");
-        panelBotonesNumeros.add(jButton6);
+        btnUno.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnUno.setText("1");
+        btnUno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUnoActionPerformed(evt);
+            }
+        });
+        panelBotonesNumeros.add(btnUno);
 
-        jButton8.setText("0");
-        panelBotonesNumeros.add(jButton8);
+        btnDos.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnDos.setText("2");
+        panelBotonesNumeros.add(btnDos);
 
-        jButton22.setText("0");
-        panelBotonesNumeros.add(jButton22);
+        btnTres.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnTres.setText("3");
+        panelBotonesNumeros.add(btnTres);
 
-        jButton7.setText("0");
-        panelBotonesNumeros.add(jButton7);
+        btnSigno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSigno.setText("+/-");
+        panelBotonesNumeros.add(btnSigno);
 
-        jButton24.setText("0");
-        panelBotonesNumeros.add(jButton24);
+        btnCero.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCero.setText("0");
+        panelBotonesNumeros.add(btnCero);
 
-        jButton23.setText("0");
-        panelBotonesNumeros.add(jButton23);
+        btnDecimal.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnDecimal.setText(",");
+        panelBotonesNumeros.add(btnDecimal);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -144,17 +166,27 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelBotonesOperadoresBasicos.setPreferredSize(new java.awt.Dimension(0, 0));
         panelBotonesOperadoresBasicos.setLayout(new java.awt.GridLayout(4, 1, 5, 5));
 
-        jButton13.setText("0");
-        panelBotonesOperadoresBasicos.add(jButton13);
+        btnSuma.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
+        btnSuma.setText("+");
+        btnSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumaActionPerformed(evt);
+            }
+        });
+        panelBotonesOperadoresBasicos.add(btnSuma);
 
-        jButton17.setText("0");
-        panelBotonesOperadoresBasicos.add(jButton17);
+        btnResta.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
+        btnResta.setText("-");
+        panelBotonesOperadoresBasicos.add(btnResta);
 
-        jButton16.setText("0");
-        panelBotonesOperadoresBasicos.add(jButton16);
+        btnMultiplicacion.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnMultiplicacion.setText("X");
+        panelBotonesOperadoresBasicos.add(btnMultiplicacion);
 
-        jButton27.setText("0");
-        panelBotonesOperadoresBasicos.add(jButton27);
+        btnDivision.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnDivision.setText("/");
+        btnDivision.setToolTipText("");
+        panelBotonesOperadoresBasicos.add(btnDivision);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -180,7 +212,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         salidaDatoSolucion.setEditable(false);
         salidaDatoSolucion.setBackground(new java.awt.Color(252, 252, 252));
-        salidaDatoSolucion.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
+        salidaDatoSolucion.setFont(new java.awt.Font("Monospaced", 0, 36)); // NOI18N
         salidaDatoSolucion.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         salidaDatoSolucion.setText("0");
         salidaDatoSolucion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8));
@@ -207,6 +239,18 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private void salidaDatoSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidaDatoSolucionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_salidaDatoSolucionActionPerformed
+
+    private void btnOchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOchoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOchoActionPerformed
+
+    private void btnUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUnoActionPerformed
+
+    private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSumaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,23 +288,23 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCero;
+    private javax.swing.JButton btnCinco;
+    private javax.swing.JButton btnCuatro;
+    private javax.swing.JButton btnDecimal;
+    private javax.swing.JButton btnDivision;
+    private javax.swing.JButton btnDos;
+    private javax.swing.JButton btnMultiplicacion;
+    private javax.swing.JButton btnNueve;
+    private javax.swing.JButton btnOcho;
+    private javax.swing.JButton btnResta;
+    private javax.swing.JButton btnSeis;
+    private javax.swing.JButton btnSiete;
+    private javax.swing.JButton btnSigno;
+    private javax.swing.JButton btnSuma;
+    private javax.swing.JButton btnTres;
+    private javax.swing.JButton btnUno;
     private javax.swing.JTextField entradaDatoPantalla;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel lblTituloPrincipal;
     private javax.swing.JLabel lblTituloResultado;
     private javax.swing.JPanel panelBotones;
