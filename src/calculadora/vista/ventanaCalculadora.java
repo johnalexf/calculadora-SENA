@@ -52,7 +52,8 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         btnMultiplicacion = new javax.swing.JButton();
         btnDivision = new javax.swing.JButton();
         panelResultado = new javax.swing.JPanel();
-        lblTituloResultado = new javax.swing.JLabel();
+        panelBotonCalcular = new javax.swing.JPanel();
+        btnCalcular = new javax.swing.JButton();
         salidaDatoSolucion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -202,13 +203,15 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         panelResultado.setPreferredSize(new java.awt.Dimension(0, 60));
         panelResultado.setLayout(new javax.swing.BoxLayout(panelResultado, javax.swing.BoxLayout.X_AXIS));
 
-        lblTituloResultado.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
-        lblTituloResultado.setText("Resultado :");
-        lblTituloResultado.setToolTipText("");
-        lblTituloResultado.setMaximumSize(new java.awt.Dimension(100, 54));
-        lblTituloResultado.setMinimumSize(new java.awt.Dimension(100, 54));
-        lblTituloResultado.setPreferredSize(new java.awt.Dimension(100, 54));
-        panelResultado.add(lblTituloResultado);
+        panelBotonCalcular.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 10));
+        panelBotonCalcular.setLayout(new javax.swing.BoxLayout(panelBotonCalcular, javax.swing.BoxLayout.LINE_AXIS));
+
+        btnCalcular.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        btnCalcular.setText("Calcular");
+        btnCalcular.setMargin(new java.awt.Insets(6, 14, 6, 14));
+        panelBotonCalcular.add(btnCalcular);
+
+        panelResultado.add(panelBotonCalcular);
 
         salidaDatoSolucion.setEditable(false);
         salidaDatoSolucion.setBackground(new java.awt.Color(252, 252, 252));
@@ -288,6 +291,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnCero;
     private javax.swing.JButton btnCinco;
     private javax.swing.JButton btnCuatro;
@@ -306,7 +310,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnUno;
     private javax.swing.JTextField entradaDatoPantalla;
     private javax.swing.JLabel lblTituloPrincipal;
-    private javax.swing.JLabel lblTituloResultado;
+    private javax.swing.JPanel panelBotonCalcular;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelBotonesNumeros;
     private javax.swing.JPanel panelBotonesOperadoresBasicos;
