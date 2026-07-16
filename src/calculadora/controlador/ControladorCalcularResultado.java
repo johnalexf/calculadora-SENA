@@ -6,7 +6,7 @@
 package calculadora.controlador;
 
 import calculadora.modelo.AnalizadorSentencia;
-import calculadora.modelo.MotorCalculadora;
+import calculadora.modelo.EvaluadorExpresion;
 import calculadora.vista.VentanaCalculadora;
 
 /**
@@ -17,10 +17,17 @@ public class ControladorCalcularResultado {
     
     private VentanaCalculadora vista;
     private AnalizadorSentencia analizador;
+    private EvaluadorExpresion evaluador;
 
-    public ControladorCalcularResultado(VentanaCalculadora vista, AnalizadorSentencia analizador) {
+    public ControladorCalcularResultado(
+            VentanaCalculadora vista, 
+            AnalizadorSentencia analizador,
+            EvaluadorExpresion evaluador
+        ) {
+        
         this.vista = vista;
         this.analizador = analizador;
+        this.evaluador = evaluador;
     }
     
     public void calcularResultado(){
