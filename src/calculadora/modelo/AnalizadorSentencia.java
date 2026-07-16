@@ -52,21 +52,21 @@ public class AnalizadorSentencia {
     
     private void descomponerSentencia(String sentencia) throws Exception{
         
+        limpiarAcumuladores();
+        
         if( esDigito(sentencia.charAt(0)) ){
 
             if(sentencia.length()>1){
                 
                 acumuladoresListos = false;
-                
-                limpiarAcumuladores();
                 acumuladorNumero.append(sentencia.charAt(0));
 
                 for( int i=1 ; i < (sentencia.length()-1); i++){
 
                     if(  esDigitoOComa(sentencia.charAt(i))  ){
                        
-                        if( acumuladoresListos ){
-                            guardarAcumuladores();
+                        if( acumuladoresListos ){ 
+                           procesarAcumuladores();
                         }
                         acumuladorNumero.append(sentencia.charAt(i));
                         
@@ -81,7 +81,7 @@ public class AnalizadorSentencia {
 
                 if( esDigito( sentencia.charAt(sentencia.length()-1) ) ){
                     if( acumuladoresListos ){
-                        guardarAcumuladores();
+                        procesarAcumuladores();
                     }
                     acumuladorNumero.append(sentencia.charAt(sentencia.length()-1));
                     guardarComponente(acumuladorNumero.toString());
@@ -100,6 +100,14 @@ public class AnalizadorSentencia {
 
     }
     
+    private void procesarAcumuladores() throws Exception {
+    
+       if(  validarOperador( acumuladorOperador.toString() )  ){ 
+            guardarAcumuladores();
+       }
+       
+    }
+    
     private void guardarAcumuladores(){
         guardarNumeroYOPerador(
             acumuladorNumero.toString(), 
@@ -107,6 +115,14 @@ public class AnalizadorSentencia {
         );
         limpiarAcumuladores();
         acumuladoresListos = false;
+    }
+    
+    private boolean validarOperador( String operador ) throws Exception {
+        
+        if(!motor.validarOperador(operador)){
+            throw new Exception(String.format("Error: el operador '%s' no es valido", acumuladorOperador.toString()));
+        }  
+        return true;
     }
     
     private void limpiarAcumuladores(){
