@@ -146,5 +146,11 @@ public class AnalizadorSentencia {
     private boolean esDigito(char evaluante){
         return Character.isDigit(evaluante);
     }
+
+    public List<String> getSentenciaDescompuesta() {
+        return sentenciaDescompuesta;
+    }
+    
+    
     
 }

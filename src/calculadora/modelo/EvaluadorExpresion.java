@@ -5,6 +5,8 @@
  */
 package calculadora.modelo;
 
+import java.util.List;
+
 /**
  *
  * @author johna
@@ -17,6 +19,10 @@ public class EvaluadorExpresion {
         this.motor = motor;
     }
     
+    public String evaluarExpresion( List<String> expresion){
+    
+        return expresion.toString();
+    }
     
     
     

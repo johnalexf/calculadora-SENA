@@ -15,6 +15,7 @@ import java.util.Map;
 public class MotorCalculadora {
     
    private final Map<String, Operador> operadoresValidos;
+   private final int prioridadAlta = 2;
 
    public MotorCalculadora(){
        operadoresValidos = new HashMap<>();
@@ -24,7 +25,7 @@ public class MotorCalculadora {
                new Operador( "suma" , 2 , 1 , (a,b)-> a + b )  );
        operadoresValidos.put( "-", 
                new Operador("resta", 2, 1, (a,b)-> a - b ));
-       operadoresValidos.put( "*", 
+       operadoresValidos.put( "X", 
                new Operador("multiplicacion", 2, 2, (a,b)-> a * b ));
        operadoresValidos.put( "/", 
                new Operador("division", 2, 2, (a,b)-> a / b ));
@@ -47,5 +48,11 @@ public class MotorCalculadora {
 
         return operador.calcular(num1, num2);
     }
+
+    public int getPrioridadAlta() {
+        return prioridadAlta;
+    }
+   
+   
      
 }

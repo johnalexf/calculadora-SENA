@@ -33,7 +33,15 @@ public class ControladorCalcularResultado {
     public void calcularResultado(){
         String entradaDatoPantalla = vista.obtenerEntradaPantalla();
         System.out.println(entradaDatoPantalla);
-        System.out.println( analizador.esSentenciaValida(entradaDatoPantalla) );
+        if( analizador.esSentenciaValida(entradaDatoPantalla) ){
+            
+            vista.actualizarSalidaSolucion(
+                    evaluador.evaluarExpresion(  
+                            analizador.getSentenciaDescompuesta() 
+                    )
+            );
+            
+        }
     }
     
 }
