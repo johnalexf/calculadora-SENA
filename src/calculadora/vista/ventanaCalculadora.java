@@ -407,19 +407,14 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         entradaDatoPantalla.setText(sentenciaActualizada);
     }
     
-    // Creamos un espacio en la memoria de la ventana para guardar su controlador
+    // Creamos un espacio en la memoria de la ventana para guardar sus controladores
     private ControladorEntradaPantalla controladorEntradaPantalla;
-
-    // Creamos la puerta para que desde el Main nos inyecten ese controlador
-    public void setControladorEntradaPantalla(ControladorEntradaPantalla controlador) {
-        this.controladorEntradaPantalla = controlador;
-    }
-    
-    //
     private ControladorCalcularResultado controladorCalcularResultado;
-    
-    public void setControladorCalcularResultado(ControladorCalcularResultado controlador){
-        this.controladorCalcularResultado = controlador;
+
+    // Creamos la puerta para que desde el Main nos inyecten los controladores
+    public void setControladores(ControladorEntradaPantalla controladorEntrada, ControladorCalcularResultado controladorResultado ) {
+        this.controladorEntradaPantalla = controladorEntrada;
+        this.controladorCalcularResultado = controladorResultado;
     }
     
 

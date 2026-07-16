@@ -23,24 +23,21 @@ public class Calculadora {
         // TODO code application logic here
         
         //Instanciar la vista principal que va ver el usuario
-        VentanaCalculadora ventanaPrincipal = new VentanaCalculadora();
+        VentanaCalculadora vista = new VentanaCalculadora();
         
-        //Instanciar el motorCalculadora
-        MotorCalculadora motorCalculadora = new MotorCalculadora();
+        //Instanciar el motor
+        MotorCalculadora motor = new MotorCalculadora();
         
-        //Instanciar el controlador Entrada pantalla pasandole como argumento la ventana principal
-        //Para que este pueda acceder a la informacion escrita por el usuario en el campo de texto
-        ControladorEntradaPantalla controladorEntradaPantalla = new ControladorEntradaPantalla(ventanaPrincipal);
-        
-        ControladorCalcularResultado controladorCalcularResultado = new ControladorCalcularResultado( ventanaPrincipal, motorCalculadora);
-        
-        //Asignar el valor del controlador entrada principal para que la vista pueda reportar cuando un boton se ha oprimido
-        ventanaPrincipal.setControladorEntradaPantalla(controladorEntradaPantalla);
-        
-        ventanaPrincipal.setControladorCalcularResultado(controladorCalcularResultado);
+        //Instanciar los controladores Entrada pasandole como argumento la ventana principal
+        //Para que estos pueda acceder a los campos de texto entradaDatoPantalla y salidaDatoSolucion
+        //Asignar las instancias de los controladores para que la vista pueda reportar cuando un boton se ha oprimido   
+        vista.setControladores(
+                new ControladorEntradaPantalla( vista ), 
+                new ControladorCalcularResultado( vista, motor)
+        );
         
         //Poner visible en pantalla la ventana principal
-        ventanaPrincipal.setVisible(true);
+        vista.setVisible(true);
     }
     
 }
