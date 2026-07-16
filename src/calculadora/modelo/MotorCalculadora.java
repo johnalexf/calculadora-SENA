@@ -5,8 +5,8 @@
  */
 package calculadora.modelo;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -14,25 +14,38 @@ import java.util.ArrayList;
  */
 public class MotorCalculadora {
     
-   private final List<Operador> operadoresValidos;
-   
+   private final Map<String, Operador> operadoresValidos;
+
    public MotorCalculadora(){
-       operadoresValidos = new ArrayList<>();
-       operadoresValidos.add(new Operador("suma", "+", 2, 1));
-       operadoresValidos.add(new Operador("resta", "-", 2, 1));
-       operadoresValidos.add(new Operador("multiplicacion", "X", 2, 2));
-       operadoresValidos.add(new Operador("division", "/", 2, 2));
+       operadoresValidos = new HashMap<>();
+       //operadoresValidos.put( "simbolo del operador" , 
+       //      new Operador ( "nombre del simbolo" , cantidad operandos, prioridad operacion, funcion que representa la operacion )
+       operadoresValidos.put( "+",
+               new Operador( "suma" , 2 , 1 , (a,b)-> a + b )  );
+       operadoresValidos.put( "-", 
+               new Operador("resta", 2, 1, (a,b)-> a - b ));
+       operadoresValidos.put( "*", 
+               new Operador("multiplicacion", 2, 2, (a,b)-> a * b ));
+       operadoresValidos.put( "/", 
+               new Operador("division", 2, 2, (a,b)-> a / b ));
    
    }
    
-   public boolean validarOperador(String operadorAValidar){
-       
-       for(Operador operador : this.operadoresValidos){
-           if(operador.getSimbolo().equals(operadorAValidar))
-               return true;
-       }
-       return false;
-       
+   public boolean validarOperador(String simbolo){  
+       return operadoresValidos.containsKey(simbolo);
    }
-    
+   
+   public double calcularExpresion(double num1,
+                                    double num2,
+                                    String simbolo) {
+
+        Operador operador = operadoresValidos.get(simbolo);
+
+        if (operador == null) {
+            throw new IllegalArgumentException("Operador no válido");
+        }
+
+        return operador.calcular(num1, num2);
+    }
+     
 }
