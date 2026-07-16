@@ -50,7 +50,7 @@ public class AnalizadorSentencia {
         
     }
     
-    public void descomponerSentencia(String sentencia) throws Exception{
+    private void descomponerSentencia(String sentencia) throws Exception{
         
         if( esDigito(sentencia.charAt(0)) ){
 
@@ -114,20 +114,20 @@ public class AnalizadorSentencia {
         acumuladorOperador.setLength(0);
     }
     
-    public void guardarComponente (String componente){
+    private void guardarComponente (String componente){
         sentenciaDescompuesta.add(componente);
     }
     
-    public void guardarNumeroYOPerador(String numero, String operador){
+    private void guardarNumeroYOPerador(String numero, String operador){
         guardarComponente(numero);
         guardarComponente(operador);
     }
     
-    public boolean esDigitoOComa(char evaluante){
+    private boolean esDigitoOComa(char evaluante){
        return ( esDigito(evaluante) || evaluante == ',' );
     }
     
-    public boolean esDigito(char evaluante){
+    private boolean esDigito(char evaluante){
         return Character.isDigit(evaluante);
     }
     
