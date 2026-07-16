@@ -15,8 +15,14 @@ import java.util.List;
  */
 public class AnalizadorSentencia {
     
+    //atributos de AnalizadorSentencia
     private List<String> sentenciaDescompuesta = new ArrayList<>();
     private MotorCalculadora motor;
+    
+    //variables globales por conveniencia para reducir codigo de  descomponerSentencia
+    private StringBuilder acumuladorNumero = new StringBuilder("");
+    private StringBuilder acumuladorOperador = new StringBuilder("");
+    private boolean acumuladoresListos;
 
     public AnalizadorSentencia(MotorCalculadora motor) {
         this.motor = motor;
@@ -34,7 +40,7 @@ public class AnalizadorSentencia {
                 return true;
             } catch (Exception e) {
                 System.err.println(e.getMessage());
-                 return false;
+                return false;
             }
             
         }else{
@@ -49,26 +55,36 @@ public class AnalizadorSentencia {
         if( esDigito(sentencia.charAt(0)) ){
 
             if(sentencia.length()>1){
-                StringBuilder acumuladorComponente = new StringBuilder("");
-                acumuladorComponente.append(sentencia.charAt(0));
+                
+                acumuladoresListos = false;
+                
+                limpiarAcumuladores();
+                acumuladorNumero.append(sentencia.charAt(0));
 
                 for( int i=1 ; i < (sentencia.length()-1); i++){
 
                     if(  esDigitoOComa(sentencia.charAt(i))  ){
-                        acumuladorComponente.append(sentencia.charAt(i));
+                       
+                        if( acumuladoresListos ){
+                            guardarAcumuladores();
+                        }
+                        acumuladorNumero.append(sentencia.charAt(i));
+                        
                     }else{
-                        guardarNumeroYOPerador(
-                                acumuladorComponente.toString(), 
-                                String.valueOf(sentencia.charAt(i))
-                        );
-                        acumuladorComponente.setLength(0);
+                        if(!acumuladoresListos){
+                            acumuladoresListos = true;
+                        }
+                        acumuladorOperador.append(sentencia.charAt(i));
                     }
 
                 }
 
                 if( esDigito( sentencia.charAt(sentencia.length()-1) ) ){
-                    acumuladorComponente.append(sentencia.charAt(sentencia.length()-1));
-                    guardarComponente(acumuladorComponente.toString());
+                    if( acumuladoresListos ){
+                        guardarAcumuladores();
+                    }
+                    acumuladorNumero.append(sentencia.charAt(sentencia.length()-1));
+                    guardarComponente(acumuladorNumero.toString());
                 }else{
                      throw new Exception( " Error la sentencia debe terminar con numero " );
                 }
@@ -82,6 +98,20 @@ public class AnalizadorSentencia {
                 throw new Exception( " El primer digito tiene que ser un numero " );
         }
 
+    }
+    
+    private void guardarAcumuladores(){
+        guardarNumeroYOPerador(
+            acumuladorNumero.toString(), 
+            acumuladorOperador.toString()
+        );
+        limpiarAcumuladores();
+        acumuladoresListos = false;
+    }
+    
+    private void limpiarAcumuladores(){
+        acumuladorNumero.setLength(0);
+        acumuladorOperador.setLength(0);
     }
     
     public void guardarComponente (String componente){
