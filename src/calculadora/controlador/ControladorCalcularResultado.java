@@ -5,6 +5,7 @@
  */
 package calculadora.controlador;
 
+import calculadora.modelo.AnalizadorSentencia;
 import calculadora.modelo.MotorCalculadora;
 import calculadora.vista.VentanaCalculadora;
 
@@ -15,16 +16,17 @@ import calculadora.vista.VentanaCalculadora;
 public class ControladorCalcularResultado {
     
     private VentanaCalculadora vista;
-    private MotorCalculadora motorCalculadora;
+    private AnalizadorSentencia analizador;
 
-    public ControladorCalcularResultado(VentanaCalculadora vista, MotorCalculadora motorCalculadora) {
+    public ControladorCalcularResultado(VentanaCalculadora vista, AnalizadorSentencia analizador) {
         this.vista = vista;
-        this.motorCalculadora = motorCalculadora;
+        this.analizador = analizador;
     }
     
     public void calcularResultado(){
         String entradaDatoPantalla = vista.obtenerEntradaPantalla();
         System.out.println(entradaDatoPantalla);
+        System.out.println( analizador.esSentenciaValida(entradaDatoPantalla) );
     }
     
 }

@@ -7,6 +7,7 @@ package calculadora;
 
 import calculadora.controlador.ControladorCalcularResultado;
 import calculadora.controlador.ControladorEntradaPantalla;
+import calculadora.modelo.AnalizadorSentencia;
 import calculadora.modelo.MotorCalculadora;
 import calculadora.vista.VentanaCalculadora;
 
@@ -27,13 +28,14 @@ public class Calculadora {
         
         //Instanciar el motor
         MotorCalculadora motor = new MotorCalculadora();
+        AnalizadorSentencia analizador = new AnalizadorSentencia(motor);
         
         //Instanciar los controladores Entrada pasandole como argumento la ventana principal
         //Para que estos pueda acceder a los campos de texto entradaDatoPantalla y salidaDatoSolucion
         //Asignar las instancias de los controladores para que la vista pueda reportar cuando un boton se ha oprimido   
         vista.setControladores(
                 new ControladorEntradaPantalla( vista ), 
-                new ControladorCalcularResultado( vista, motor)
+                new ControladorCalcularResultado( vista, analizador)
         );
         
         //Poner visible en pantalla la ventana principal
