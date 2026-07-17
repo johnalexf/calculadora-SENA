@@ -55,7 +55,7 @@ public class AnalizadorSentencia {
 
                 for( int i=1 ; i < (sentencia.length()-1); i++){
 
-                    if(  esDigitoOComa(sentencia.charAt(i))  ){
+                    if(  esDigitoOPunto(sentencia.charAt(i))  ){
                        
                         if( acumuladoresListos ){ 
                            procesarAcumuladores();
@@ -131,8 +131,8 @@ public class AnalizadorSentencia {
         guardarComponente(operador);
     }
     
-    private boolean esDigitoOComa(char evaluante){
-       return ( esDigito(evaluante) || evaluante == ',' );
+    private boolean esDigitoOPunto(char evaluante){
+       return ( esDigito(evaluante) || evaluante == '.' );
     }
     
     private boolean esDigito(char evaluante){

@@ -197,7 +197,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panelBotonesNumeros.add(btnCero);
 
         btnDecimal.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
-        btnDecimal.setText(",");
+        btnDecimal.setText(".");
         btnDecimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eventClicBotonesNumeros(evt);
