@@ -7,6 +7,7 @@ package calculadora.vista;
 
 import calculadora.controlador.ControladorCalcularResultado;
 import calculadora.controlador.ControladorEntradaPantalla;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -419,6 +420,15 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     public void setControladores(ControladorEntradaPantalla controladorEntrada, ControladorCalcularResultado controladorResultado ) {
         this.controladorEntradaPantalla = controladorEntrada;
         this.controladorCalcularResultado = controladorResultado;
+    }
+    
+    public void mostrarAlertaError(String mensaje){
+        JOptionPane.showMessageDialog(
+                panelPantalla, 
+                mensaje,
+                "ERROR",
+                JOptionPane.ERROR_MESSAGE
+        );
     }
     
 

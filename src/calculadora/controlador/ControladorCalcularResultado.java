@@ -41,7 +41,8 @@ public class ControladorCalcularResultado {
                 );
             }
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            vista.actualizarSalidaSolucion("Error");
+            vista.mostrarAlertaError(e.getMessage());
         }
         
     }
