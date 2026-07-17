@@ -81,7 +81,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panelPantalla.setPreferredSize(new java.awt.Dimension(0, 70));
         panelPantalla.setLayout(new java.awt.BorderLayout());
 
-        entradaDatoPantalla.setFont(new java.awt.Font("Monospaced", 0, 36)); // NOI18N
+        entradaDatoPantalla.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
         entradaDatoPantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         entradaDatoPantalla.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8)));
         panelPantalla.add(entradaDatoPantalla, java.awt.BorderLayout.CENTER);
@@ -97,7 +97,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panelBotonesNumeros.setRequestFocusEnabled(false);
         panelBotonesNumeros.setLayout(new java.awt.GridLayout(4, 3, 5, 5));
 
-        btnSiete.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnSiete.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnSiete.setText("7");
         btnSiete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +106,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnSiete);
 
-        btnOcho.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnOcho.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnOcho.setText("8");
         btnOcho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnOcho);
 
-        btnNueve.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnNueve.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnNueve.setText("9");
         btnNueve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +124,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnNueve);
 
-        btnCuatro.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCuatro.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnCuatro.setText("4");
         btnCuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +133,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnCuatro);
 
-        btnCinco.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCinco.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnCinco.setText("5");
         btnCinco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +142,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnCinco);
 
-        btnSeis.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnSeis.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnSeis.setText("6");
         btnSeis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +151,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnSeis);
 
-        btnUno.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnUno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnUno.setText("1");
         btnUno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +160,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnUno);
 
-        btnDos.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnDos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnDos.setText("2");
         btnDos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +169,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnDos);
 
-        btnTres.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnTres.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnTres.setText("3");
         btnTres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +187,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesNumeros.add(btnLimpiar);
 
-        btnCero.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnCero.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnCero.setText("0");
         btnCero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,7 +215,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         panelBotonesOperadoresBasicos.setPreferredSize(new java.awt.Dimension(0, 0));
         panelBotonesOperadoresBasicos.setLayout(new java.awt.GridLayout(4, 1, 5, 5));
 
-        btnSuma.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
+        btnSuma.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnSuma.setText("+");
         btnSuma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +224,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesOperadoresBasicos.add(btnSuma);
 
-        btnResta.setFont(new java.awt.Font("Segoe UI", 0, 42)); // NOI18N
+        btnResta.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnResta.setText("-");
         btnResta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,7 +233,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesOperadoresBasicos.add(btnResta);
 
-        btnMultiplicacion.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnMultiplicacion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnMultiplicacion.setText("X");
         btnMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,7 +242,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
         panelBotonesOperadoresBasicos.add(btnMultiplicacion);
 
-        btnDivision.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
+        btnDivision.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnDivision.setText("/");
         btnDivision.setToolTipText("");
         btnDivision.addActionListener(new java.awt.event.ActionListener() {
@@ -283,7 +283,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
 
         salidaDatoSolucion.setEditable(false);
         salidaDatoSolucion.setBackground(new java.awt.Color(252, 252, 252));
-        salidaDatoSolucion.setFont(new java.awt.Font("Monospaced", 0, 36)); // NOI18N
+        salidaDatoSolucion.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
         salidaDatoSolucion.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         salidaDatoSolucion.setText("0");
         salidaDatoSolucion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 8, 1, 8));
