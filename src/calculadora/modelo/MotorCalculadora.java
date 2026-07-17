@@ -5,7 +5,9 @@
  */
 package calculadora.modelo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -51,6 +53,23 @@ public class MotorCalculadora {
 
     public int getPrioridadAlta() {
         return prioridadAlta;
+    }
+    
+    public List<String> obtenerSimbolosIgualPrioridad(int prioridad){
+
+        List<String> simbolos = new ArrayList<>();
+
+        // Se utiliza Map.Entry para representar una única entrada (clave, valor) de un Map.
+        // entrySet() devuelve todas las entradas del Map para poder recorrerlas con un foreach.
+        for(Map.Entry<String, Operador> entrada : operadoresValidos.entrySet()){
+
+            if(entrada.getValue().getPrioridad() == prioridad){
+                simbolos.add(entrada.getKey());
+            }
+
+        }
+
+        return simbolos;
     }
    
    

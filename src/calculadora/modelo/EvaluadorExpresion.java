@@ -19,9 +19,39 @@ public class EvaluadorExpresion {
         this.motor = motor;
     }
     
-    public String evaluarExpresion( List<String> expresion){
-    
-        return expresion.toString();
+    public String evaluarExpresion( List<String> expresion ){
+        
+        int prioridadAEvaluar = motor.getPrioridadAlta();
+        
+        while(prioridadAEvaluar != 0){
+            
+            List<String> simbolosAEvaluar = motor.obtenerSimbolosIgualPrioridad(prioridadAEvaluar);
+
+            double resultadoOperacion;
+
+            for(String simbolo: simbolosAEvaluar){
+                while(expresion.contains(simbolo)){
+                    int indice = expresion.indexOf(simbolo);
+                    resultadoOperacion = motor.calcularExpresion( 
+                                                    Double.parseDouble(expresion.get(indice-1)) , 
+                                                    Double.parseDouble(expresion.get(indice+1)) , 
+                                                    simbolo
+                    );
+                    expresion.set(
+                            indice-1,
+                            String.valueOf(resultadoOperacion)
+                    );
+                    expresion.remove(indice+1);
+                    expresion.remove(indice);
+                }
+            }
+            
+            prioridadAEvaluar--;
+        }
+        
+        
+        
+        return expresion.get(0);
     }
     
     
