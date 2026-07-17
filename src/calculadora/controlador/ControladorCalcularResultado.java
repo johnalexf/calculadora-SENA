@@ -32,16 +32,18 @@ public class ControladorCalcularResultado {
     
     public void calcularResultado(){
         String entradaDatoPantalla = vista.obtenerEntradaPantalla();
-        System.out.println(entradaDatoPantalla);
-        if( analizador.esSentenciaValida(entradaDatoPantalla) ){
-            
-            vista.actualizarSalidaSolucion(
-                    evaluador.evaluarExpresion(  
-                            analizador.getSentenciaDescompuesta() 
-                    )
-            );
-            
+        try {
+            if( analizador.esSentenciaValida(entradaDatoPantalla) ){
+                vista.actualizarSalidaSolucion(
+                        evaluador.evaluarExpresion(  
+                                analizador.getSentenciaDescompuesta() 
+                        )
+                );
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
         }
+        
     }
     
 }

@@ -28,24 +28,16 @@ public class AnalizadorSentencia {
         this.motor = motor;
     }
     
-    public boolean esSentenciaValida(String sentencia){
+    public boolean esSentenciaValida(String sentencia)throws Exception {
     
         sentenciaDescompuesta.clear();
         
         if(!sentencia.isBlank()){
-            
-            try {
-                descomponerSentencia(sentencia);
-                System.out.println(Arrays.toString(sentenciaDescompuesta.toArray()));
-                return true;
-            } catch (Exception e) {
-                System.err.println(e.getMessage());
-                return false;
-            }
-            
+            descomponerSentencia(sentencia);
+            return true;
+           
         }else{
-            System.err.print("Error la sentencia no puede estar vacia");
-            return false;
+            throw new Exception( "Error la sentencia no puede estar vacia" );
         }
         
     }
